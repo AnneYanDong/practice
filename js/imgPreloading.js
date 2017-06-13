@@ -29,7 +29,7 @@
 		$(imgObj).on('load error',function(){
 			/*第一种方法*/
 			/*这里出现的问题是，setTimeout()方法的第一个参数不能传立即执行函数，不然就看不到效果，只能传入函数代码块*/
-			// setTimeout(function(){	
+			// setTimeout(function(){
 			// 	console.log(count);
 			// 	console.log('len->'+ len);
 			// 	console.log(Math.round((count + 1)/len * 100) + '%');
@@ -40,7 +40,7 @@
 			// 		document.title = '1/' + len;
 			// 	}
 			// 	count++;
-			// },i * 1000);
+			// },i * 100);
 
 			/*第二种方法*/
 			/*这样写没问题，可是当你的图片资源全都是本地来的时候，
