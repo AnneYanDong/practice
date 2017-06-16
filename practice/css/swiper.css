@@ -1,0 +1,27 @@
+.swiper-container {
+	width: 400px;
+	height: 200px;
+	// line-height: 200px;
+	border: 1px solid red;
+}
+.swiper-wrapper .swiper-slide {
+	text-align: center;
+	font-size: 36px;
+	font-weight: bolder;
+}
+.slide1 {
+	background-color: #ff7e54;
+}
+.slide2 {
+	background-color: #c982c7;
+}
+.slide3 {
+	background-color: #45bac5;
+}
+.swiper-pagination {
+	left: 47%;
+	top: 17%;
+}
+.swiper-pagination span {
+	margin-right: 10px;
+}
