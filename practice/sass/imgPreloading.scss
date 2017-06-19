@@ -1,0 +1,69 @@
+html,body {
+	height: 100%;
+}
+// .loading {
+// 	width: 100%;
+// 	height: 100%;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     background-color: #eee;
+// }
+// .loading .progress {
+// 	font-size: 30px;
+// 	font-weight: bold;
+// 	text-align: center;
+// 	margin-top: 400px;
+// }
+// .content {
+// 	display: none;
+// }
+// .content img {
+// 	width: 200px;
+// 	height: 200px;
+// }
+// .content,.btn-wrap {
+// 	text-align: center;
+// }
+// .btn{
+// 	margin-right: 10px;
+// }
+
+//sass写法
+.loading {
+	width: 100%;
+	height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    .progress {
+		font: {
+			size: 30px;
+			weight: bold;
+		}
+		text-align: center;
+		margin-top: 400px;
+    }
+}
+.content {
+	display: none;
+	text-align: center;
+	img {
+		width: 200px;
+		height: 200px;
+	}
+	.btn-wrap {
+		text-align: center;
+	}
+	.btn {
+		margin-right: 10px;
+	}
+}
+.test {
+	color: blue;
+	.test1 {
+		color: red;
+	}
+}
+
