@@ -1,0 +1,51 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	list-style: none;
+	text-decoration: none;
+}
+.notice {
+	width: 298px;
+	height: 98px;
+	border: 1px solid #eee;
+	overflow: hidden;
+	margin: 100px auto;
+}
+.notice-title {
+	background-color: #f7f7f7;
+	height: 27px;
+	position: relative;
+}
+.notice-title ul {
+	width: 301px;
+	left: -1px; //为了不让最左边和最右边的tab的左边框和右边框与最外层的盒子的边框重叠
+	position: absolute;
+}
+.notice-title li {
+	float: left;
+	width: 58px; //301px/5个li元素，每个li元素还要加1px的边框
+	height: 26px;
+	line-height: 26px; //要加一个底边框,没有高亮的时候
+	color: black;
+	text-align: center;
+	border-bottom: 1px solid #eee;
+	background-color: #f7f7f7;
+}
+.notice-title li.select {
+	background-color: #fff;
+	border-bottom-color: #fff;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	font-weight: bold;
+}
+.notice-title li a:link,.notice-title li a:visited {
+	color: black;
+}
+.notice-title li a:hover {
+	color: #f90;
+}
+.notice-content .mod {
+	overflow: hidden;
+	margin: 10px 10px 10px 19px;
+}
