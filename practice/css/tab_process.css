@@ -19,18 +19,20 @@
 }
 .notice-title ul {
 	width: 301px;
-	left: -1px; //为了不让最左边和最右边的tab的左边框和右边框与最外层的盒子的边框重叠
-	position: absolute;
+	position: absolute; /*相对于.notice-title元素进行绝对定位，然后左移-1px*/
+	left: -1px; /*为了不让最左边和最右边的tab的左边框和右边框与最外层的盒子的边框重叠*/
+	
 }
 .notice-title li {
 	float: left;
-	width: 58px; //301px/5个li元素，每个li元素还要加1px的边框
+	width: 58px; /*301px/5个li元素，每个li元素还要加1px的边框*/
 	height: 26px;
-	line-height: 26px; //要加一个底边框,没有高亮的时候
+	line-height: 26px; /*要加一个底边框,没有高亮的时候*/
 	color: black;
 	text-align: center;
 	border-bottom: 1px solid #eee;
 	background-color: #f7f7f7;
+	padding:0 1px; /*加填充的目的是为了防止border元素会改变容器大小的毛病，也就是你鼠标滑过的时候，因为加了左右边框你会感觉每个li元素左右移动了*/
 }
 .notice-title li.select {
 	background-color: #fff;
@@ -38,6 +40,8 @@
 	border-left: 1px solid #eee;
 	border-right: 1px solid #eee;
 	font-weight: bold;
+	padding:0; /*由于上面高亮的时候加了左右各1px的边框和没有高亮的时候左右各1px的填充，
+	那么高亮时li元素的宽度为62px，自然会把最后一个li元素挤到下一行去，所以高亮的时候再去掉填充就可以啦*/
 }
 .notice-title li a:link,.notice-title li a:visited {
 	color: black;
