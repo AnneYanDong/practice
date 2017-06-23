@@ -1,0 +1,66 @@
+#divTest {
+	width: 400px;
+	margin: 0 auto;
+}
+//tabs
+.ui-tabs {
+	// position: relative;
+	// padding: .2em;
+}
+
+.ui-tabs .ui-tabs-nav {
+	margin: 0;
+	padding: 0 .2em 0 0;
+}
+
+.ui-tabs .ui-tabs-nav li {
+	list-style: none;
+	float: left;
+	// position: relative;
+	// top: 0;
+	margin: 1px .2em 0 0;
+	// border-bottom-width: 0;
+	// padding: 0;
+	white-space: nowrap;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+	float: left;
+	padding: .5em 1em;
+	text-decoration: none;
+}
+
+.ui-tabs .ui-tabs-panel {
+	// display: block;
+	border-width: 0;
+	padding: 1em 1.4em;
+	// background: none
+}
+.ui-widget-header {
+	// border: 1px solid #ddd;
+	background: #e9e9e9;
+	color: #333;
+	font-weight: bold;
+}
+
+.ui-widget-header a {
+	color: #333;
+}
+.ui-widget-header a:hover {
+	background-color: #b7b1b1;
+}
+
+.ui-widget-content {
+	border: 1px solid #ddd;
+	// background: #fff;
+	color: #333;
+}
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+	content: "";
+	display: table;
+	border-collapse: collapse;
+}
+.ui-helper-clearfix:after {
+	clear: both;
+}
