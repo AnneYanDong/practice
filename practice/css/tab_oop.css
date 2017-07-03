@@ -1,0 +1,61 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style-type: none;
+}
+body {
+	background-color: #323232;
+	font-size: 12px;
+}
+.tab {
+	width: 300px;
+	height: auto;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}
+.tab .tab-nav li{
+	float: left;
+	margin-right: 5px;
+	border-radius: 5px 5px 0 0;
+	width: 70px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	background-color: #767676;
+}
+.tab .tab-nav li.actived {
+	background-color: #fff;
+}
+.tab .tab-nav li.actived a {
+	color: #737373;
+}
+.tab .tab-nav li a {
+	color: #fff;
+	padding: 0 5px;
+}
+.tab .tab-content {
+	background-color: #fff;
+	width: 300px;
+	height: 200px;
+	padding: 5px;
+	position: absolute;
+	top: 30px;
+}
+.tab .tab-content .tab-content-item {
+	height: 200px;
+	display: none;
+	position: absolute; /*解决淡入淡出时的问题*/
+}
+.tab .tab-content .tab-content-item img {
+	width: 300px;
+	height: 200px;
+}
+.tab .tab-content .tab-content-item.current {
+	display: block;
+}
