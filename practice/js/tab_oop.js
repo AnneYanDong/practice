@@ -50,6 +50,7 @@
 			//自动播放
 			_this.autoPlay();
 
+			/*鼠标移到Tab上停止自动播放，移出tab又继续自动播放*/
 			_this.tab.hover(function(){
 				console.log("this",this);
 				console.log("_this",_this);
@@ -57,7 +58,11 @@
 			},function(){
 				_this.autoPlay();
 			});
+		}
 
+		/*设置默认第几个tab显示*/
+		if(config.invoke > 1) {
+			_this.invoke(_this.tabItems.eq(config.invoke-1));
 		}
 
 	}
