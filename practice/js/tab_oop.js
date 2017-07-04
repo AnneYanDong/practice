@@ -15,7 +15,7 @@
 			//默认选中第几个tab
 			"invoke": 1,
 			//是否自动播放,当指定了时间间隔就表示自动切换，并且切换时间为指定的时间间隔
-			"auto": 3000
+			"auto": false
 		}
 		//扩展配置参数
 		if(_this.getConfig()) {
@@ -64,7 +64,6 @@
 		if(config.invoke > 1) {
 			_this.invoke(_this.tabItems.eq(config.invoke-1));
 		}
-
 	}
 
 	//定义原型
@@ -108,15 +107,35 @@
 					_this_.loop = 0;
 				}
 				console.log("->",_this_.loop);
+				/*trigger()方法：触发某个元素的*/
 				tabItems.eq(_this_.loop).trigger(config.triggerType);
 				//触发一下鼠标移开时的事件，解决自动播放的问题
 				if (_this_.config.auto) {
 					tabItems.eq(_this_.loop).trigger("mouseout");
 				}
 			},config.auto);
-
 		}
 	}
+
+	/*调用一个init()方法初始化多个tab*/
+	Tab.init = function(tabs) {
+		var _this = this;
+		tabs.each(function(){
+			console.log($(this));
+			new _this($(this));
+		});
+	}
+
+	/*注册成jquery方法tab()*/
+	$.fn.extend({
+		tab: function() {
+			console.log("注册成jquery方法：",this);
+			this.each({
+				new Tab($(this));
+			});
+			return this;
+		}
+	})
 
 	//将Tab类挂在window对象上
 	window.Tab = Tab;
