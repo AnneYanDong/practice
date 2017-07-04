@@ -7,23 +7,69 @@
 	<script type="text/javascript" src="../js/tab_oop.js"></script>
 </head>
 <body>
+	<div class="tab-view">
+		<p>1、没有设置任何参数</p>
+		<div class="js-tab tab">
+			<ul class="tab-nav">
+				<li class="actived"><a href="javascript:void(0);">新闻</a></li>
+				<li><a href="javascript:void(0);">生活</a></li>
+				<li><a href="javascript:void(0);">科技</a></li>
+				<li><a href="javascript:void(0);">创意</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-content-item current"><img src="../img/20170313_gd_lt.png" /></div>
+				<div class="tab-content-item"><img src="../img/20170313_gd_znsw.png"/></div>
+				<div class="tab-content-item"><img src="../img/20170313_pf_cx.png" /></div>
+				<div class="tab-content-item"><img src="../img/20170313_xy_jy.png" /></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="tab-view">
+		<p>2、鼠标滑过事件，切换效果为淡入淡出，2秒自动切换</p>
+		<div class="js-tab tab" data-config='{"triggerType": "mouseover","effect": "fade","invoke": 1,"auto": 2000}'>
+			<ul class="tab-nav">
+				<li class="actived"><a href="javascript:void(0);">新闻</a></li>
+				<li><a href="javascript:void(0);">生活</a></li>
+				<li><a href="javascript:void(0);">科技</a></li>
+				<li><a href="javascript:void(0);">创意</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-content-item current"><img src="../img/20170313_gd_lt.png" /></div>
+				<div class="tab-content-item"><img src="../img/20170313_gd_znsw.png"/></div>
+				<div class="tab-content-item"><img src="../img/20170313_pf_cx.png" /></div>
+				<div class="tab-content-item"><img src="../img/20170313_xy_jy.png" /></div>
+			</div>
+		</div>
+	</div>
 	<!--data-config属性是人工配置config参数（必须是写成Json的数据形式，因为后期要对它用jquery.parseJson()函数进行处理），如果没有这个属性，就用Tab类（Tab构造函数）里默认的配置参数  -->
-	<div class="js-tab tab" data-config='{"triggerType": "mouseover","effect": "fade","invoke": 2,"auto": 2000}'>
-		<ul class="tab-nav">
-			<li class="actived"><a href="javascript:void(0);">新闻</a></li>
-			<li><a href="javascript:void(0);">科技</a></li>
-			<li><a href="javascript:void(0);">生活</a></li>
-			<li><a href="javascript:void(0);">创意</a></li>
-		</ul>
-		<div class="tab-content">
-			<div class="tab-content-item current"><img src="../img/20170313_gd_lt.png" /></div>
-			<div class="tab-content-item"><img src="../img/20170313_gd_znsw.png" /></div>
-			<div class="tab-content-item"><img src="../img/20170313_pf_cx.png" /></div>
-			<div class="tab-content-item"><img src="../img/20170313_xy_jy.png" /></div>
+	<div class="tab-view">
+		<p>3、点击事件，切换效果为淡入淡出，默认选中第二个</p>
+		<div class="js-tab tab" data-config='{"triggerType": "click","effect": "fade","invoke": 2}'>
+			<ul class="tab-nav">
+				<li class="actived"><a href="javascript:void(0);">新闻</a></li>
+				<li><a href="javascript:void(0);">科技</a></li>
+				<li><a href="javascript:void(0);">生活</a></li>
+				<li><a href="javascript:void(0);">创意</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-content-item current"><img src="../img/20170313_gd_lt.png" /></div>
+				<div class="tab-content-item"><img src="../img/20170313_gd_znsw.png" /></div>
+				<div class="tab-content-item"><img src="../img/20170313_pf_cx.png" /></div>
+				<div class="tab-content-item"><img src="../img/20170313_xy_jy.png" /></div>
+			</div>
 		</div>
 	</div>
 <script type="text/javascript">
-	var tab = new Tab($(".js-tab").eq(0));
+	/*var tab1 = new Tab($(".js-tab").eq(0));
+	var tab2 = new Tab($(".js-tab").eq(1));
+	var tab3 = new Tab($(".js-tab").eq(2));*/
+
+	/*但是上面那样，对应一个tab就要new一个，很显然不是我们要的组件化的结果，我们希望通过一个init()方法实例化一次就可以了,传入js-tab类的集合就可以了*/
+	// Tab.init($(".js-tab"));
+	
+	/*注册为jquery的方法，也就是获取所有tab后，调用一个tab()方法*/
+	$(".js-tab").tab();
 </script>
 </body>
 </html>
