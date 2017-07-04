@@ -12,12 +12,20 @@ body {
 	background-color: #323232;
 	font-size: 12px;
 }
+.tab-view {
+	float: left;
+	margin-right: 200px;
+}
+.tab-view p {
+	color: #999;
+	margin-bottom: 20px;
+	top: 80px;
+}
 .tab {
 	width: 300px;
 	height: auto;
 	position: absolute;
-	top: 100px;
-	left: 100px;
+	top: 30px;
 }
 .tab .tab-nav li{
 	float: left;
